@@ -1,0 +1,87 @@
+<html><head>
+    <style>
+        input[type=text], select {
+          width: 100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+        }
+        
+        input[type=submit] {
+          width: 20%;
+          background-color: #4CAF50;
+          color: white;
+          padding: 14px 20px;
+          margin: 8px 0;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+        
+        input[type=submit]:hover {
+          background-color: #45a049;
+        }
+        
+        div {
+          border-radius: 5px;
+          background-color: #f2f2f2;
+          padding: 20px;
+        }
+        </style>
+</head><body><% for (var i=0;i<hah.length;i++){ %>
+    Name of patient:-<%=hah[i].name %><br>  <br>weight:- <%=hah[i].weight %><br>  <br>
+   Height:- <%=hah[i].height %><br>  <br>
+   Age:-<%=hah[i].age %><br>  <br>
+   Address:-<%=hah[i].address %><br>  <br>
+
+<% } %>
+  <% for (var i=0;i<ad.length;i++){ %>
+      Date:-  <%=ad[i].c %> <br>  
+Doctor:- <%=ad[i].doctor %><br>  
+
+Disease-diagnosed:- <%=ad[i].disease %><br>  
+Hospital-visited:-<%=ad[i].hospital %><br >   <br>  <br> <br> <% } %>
+
+  <a href="/user/logout">logout</a>
+   
+        <div style="width:800px;justify-content:centre;margin-left:200px">
+                <form action="/user/dash" method="post">
+                  <label for="fname">current doctor</label>
+                  <input type="text" id="fname" name="doctor">
+              
+                  <label for="lname">Diagnosed disease</label>
+                  <input type="text" id="lname" name="disease">
+              
+                  <label for="lname">Hospital</label>
+                  <input type="text" id="lname" name="hospital">
+              
+                  <label for="lname">more info (if any)</label>
+                  <input type="text" id="lname" name="info">
+                  <label for="fname">date</label>
+                  <input type="date" id="fname" name="date"><br><br>
+              
+                 
+                  
+                
+                  <input type="submit" value="Submit">
+                </form>
+              </div>
+
+              
+    
+    
+    
+    
+    <a href="/user/form"><button>click here to save normal data</button></a>
+    <form method="post" enctype="multipart/form-data" action="dash">
+      prescription:-   <input type="file" name="file" />
+      xrays:- <input type="file" name="file" />
+      reports:-   <input type="file" name="file" />
+      <input type="submit" />
+  </form>
+    
+</body>
+</html>

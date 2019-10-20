@@ -1,0 +1,26 @@
+<a href="/user/logout"><button>logout</button></a><form method="GET" action="/doct/dass"> <input type="string" name="objec"><input type="submit">
+<br><br>
+<% for (var i=0;i<hah.length;i++){ %>
+         Name of patient:-<%=hah[i].name %><br>  <br>weight:- <%=hah[i].weight %><br>  <br>
+        Height:- <%=hah[i].height %><br>  <br>
+        Age:-<%=hah[i].age %><br>  <br>
+        Address:-<%=hah[i].address %><br>  <br>
+
+<% } %>
+
+
+
+<br><br><br><br>
+<% for (var i=0;i<jim.length;i++){ %>
+      Date:-  <%=jim[i].c %> <br>
+Doctor:- <%=jim[i].doctor %><br>
+
+Disease-diagnosed:- <%=jim[i].disease %><br>
+Hospital-visited:-<%=jim[i].hospital %><br>
+
+<br>
+<br><br><br>
+
+
+
+<% } %>
