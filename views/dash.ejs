@@ -32,6 +32,7 @@
         }
         </style>
 </head><body><% for (var i=0;i<hah.length;i++){ %>
+    unique id:-  <%=hah[i]._id %><br>
     Name of patient:-<%=hah[i].name %><br>  <br>weight:- <%=hah[i].weight %><br>  <br>
    Height:- <%=hah[i].height %><br>  <br>
    Age:-<%=hah[i].age %><br>  <br>
@@ -39,6 +40,7 @@
 
 <% } %>
   <% for (var i=0;i<ad.length;i++){ %>
+      <br>
       Date:-  <%=ad[i].c %> <br>  
 Doctor:- <%=ad[i].doctor %><br>  
 
@@ -46,6 +48,7 @@ Disease-diagnosed:- <%=ad[i].disease %><br>
 Hospital-visited:-<%=ad[i].hospital %><br >   <br>  <br> <br> <% } %>
 
   <a href="/user/logout">logout</a>
+  <a href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data= <%=hah[0]._id %>"><button><H3>INFO QR-CODE</H3></button></a>
    
         <div style="width:800px;justify-content:centre;margin-left:200px">
                 <form action="/user/dash" method="post">
